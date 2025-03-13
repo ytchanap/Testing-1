@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数据交互测试页</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        .io-box {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 输入区 -->
+    <div class="io-box">
+        <h3>输入数据</h3>
+        A: <input type="number" id="inputA" value="1">
+        B: <input type="number" id="inputB" value="2">
+        <button onclick="calculate()">计算</button>
+    </div>
+
+    <!-- 输出区 -->
+    <div class="io-box" style="background: #f8f9fa">
+        <h3>输出结果</h3>
+        C: <span id="outputC">0</span>
+    </div>
+
+    <script>
+        // 计算逻辑
+        function calculate() {
+            // 获取输入值
+            const a = Number(document.getElementById('inputA').value)
+            const b = Number(document.getElementById('inputB').value)
+            
+            // 执行计算 (示例: C=A+B)
+            const c = a + b
+
+            // 显示结果
+            document.getElementById('outputC').textContent = c
+        }
+
+        // 初始计算
+        calculate()
+    </script>
+</body>
+</html>
